@@ -1,0 +1,7 @@
+.todoList-root {
+  display: flex;
+  width: 50%;
+  height: 10em;
+  background-color: beige;
+}
+
