@@ -3,5 +3,6 @@
   width: 50%;
   height: 10em;
   background-color: beige;
+  flex-direction: column;
 }
 

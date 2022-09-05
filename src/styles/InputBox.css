@@ -1,0 +1,19 @@
+.inputbox-root {
+    display: flex;
+    background-color: blue;
+}
+
+.inputbox-root form{
+    display: flex;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.inputtextbox {
+    width: 90%;
+    font-size: xx-large;
+}
+.submitbutton {
+    width: 10%;
+    font-size: xx-large;
+}
