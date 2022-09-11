@@ -1,0 +1,31 @@
+.listBox-root{
+    display: flex;
+    z-index: 2;
+    background-color: rgb(127, 150, 255);
+    min-height: 6em ;
+    flex-direction: column;
+}
+
+.listBoxItem-root{
+    display: flex;
+    min-height: 4em;
+    min-width: 100%;
+}
+
+.listBoxItem-task{
+    display: flex;
+    background-color: red;
+    min-width: 30%;
+}
+
+.listBoxItem-notes{
+    display: flex;
+    background-color: yellow;
+    min-width: 60%;
+}
+
+.listBoxItem-completed{
+    display: flex;
+    background-color: green;
+    min-width: 10%;
+}
