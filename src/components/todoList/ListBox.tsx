@@ -11,7 +11,7 @@ function Listbox({ taskList }: ListBoxProps) {
     <div className="listBox-root">
       {taskList.map((data)=>{
         return(
-            <ListBoxItem task={data.task} notes={data.notes} completed = {data.completed}/>
+            <ListBoxItem taskname={data.taskname} notes={data.notes} completed = {data.completed}/>
         )
       })}
     </div>

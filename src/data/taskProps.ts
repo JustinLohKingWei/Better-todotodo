@@ -1,5 +1,5 @@
 type taskProps = {
-    task : string
+    taskname : string
     notes : string
     completed : boolean
 };

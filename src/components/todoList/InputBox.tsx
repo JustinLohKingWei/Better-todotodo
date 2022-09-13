@@ -1,15 +1,23 @@
-import "../../styles/InputBox.css"
+import { Dispatch, SetStateAction } from "react";
+import "../../styles/InputBox.css";
 
-function InputBox() {
-    return(
-        <div className="inputbox-root">
-            <form >
-                <input className="inputtextbox" type='text'/>
-                <input className="submitbutton" type="submit" value="Go" />
-            </form>
-        </div>
-    )
-    
+type InputBoxProps = {
+  displayListBox: boolean;
+  setdisplayListBox: Dispatch<SetStateAction<boolean>>;
+};
+
+function InputBox({ displayListBox, setdisplayListBox }: InputBoxProps) {
+  return (
+    <div className="inputbox-root">
+      <input className="inputtextbox" type="text" />
+      <input
+        className="submitbutton"
+        type="submit"
+        value="Go"
+        onClick={() => setdisplayListBox(!displayListBox)}
+      />
+    </div>
+  );
 }
 
-export default InputBox
+export default InputBox;

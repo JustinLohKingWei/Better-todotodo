@@ -1,6 +1,7 @@
 .inputbox-root {
     display: flex;
     background-color: blue;
+    height: 100%;
 }
 
 .inputbox-root form{
