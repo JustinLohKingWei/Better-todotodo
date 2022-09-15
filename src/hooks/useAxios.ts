@@ -9,7 +9,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
 
   const fetchData = async (params: AxiosRequestConfig) => {
     try {
-      const resp = await axios.request(axiosParams);
+      const resp = await axios.request(params);
       setResponse(resp);
     } catch (e) {
       const err = e as AxiosError;
@@ -23,7 +23,11 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
     fetchData(axiosParams);
   }, []);
 
-  return { response, error, loading };
+  const sendData = () => {
+    fetchData(axiosParams);
+  };
+
+  return { response, error, loading, sendData };
 };
 
 export default useAxios;
