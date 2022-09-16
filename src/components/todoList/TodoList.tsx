@@ -6,7 +6,6 @@ import { useState } from "react";
 
 function TodoList() {
   const [displayListBox, setdisplayListBox] = useState(false);
-  const [taskList, setTaskList] = useState();
 
   return (
     <div className="todoList-root">
