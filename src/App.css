@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.backgroundWallPaper{
+  background-image: url("/src/img/space.jpg");
+}

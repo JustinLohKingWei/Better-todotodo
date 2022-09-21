@@ -6,14 +6,21 @@ import { useState } from "react";
 
 function TodoList() {
   const [displayListBox, setdisplayListBox] = useState(false);
+  const [taskList,settaskList] = useState(taskList1);
+  const[inputQuery,setinputQuery]= useState("All")
 
   return (
     <div className="todoList-root">
       <InputBox
         displayListBox={displayListBox}
         setdisplayListBox={setdisplayListBox}
+        inputQuery = {inputQuery}
+        setinputQuery = {setinputQuery}
+        taskList = {taskList}
+        settaskList = {settaskList}
       />
-      {displayListBox ? <Listbox taskList={taskList1} /> : <div />}
+      {inputQuery}
+      {displayListBox ? <Listbox taskList={taskList} /> : <div />}
     </div>
   );
 }

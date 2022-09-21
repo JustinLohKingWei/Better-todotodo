@@ -8,7 +8,7 @@ function ListBoxItem({taskname,notes,completed}:taskProps) {
             <div className='listBoxItem-task'>
                 <div>{taskname}</div></div>
             <div className='listBoxItem-notes'><div>{notes}</div></div>
-            <div className='listBoxItem-completed'><div>{completed}</div></div>
+            <div className='listBoxItem-completed'><div>{completed? 'done':'not done'}</div></div>
         </div>
     )
     

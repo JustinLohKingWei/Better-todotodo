@@ -2,7 +2,7 @@ import { AxiosRequestConfig } from "axios";
 
 const BASEURL = "https://jsonplaceholder.typicode.com/posts/";
 
-// Creates an axios request config to be used with the useAxiosHook
+// Creates an axios request config to be used with the useAxiosHook, it takes certain parameters to be included in the URL
 const TaskConfig = (id?:number): AxiosRequestConfig => {
   return {
     method: "get",

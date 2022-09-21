@@ -1,5 +1,4 @@
-import { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
-import axios from "axios";
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { useState, useEffect } from "react";
 
 // useAxios hook takes in a given request configuration, and makes a request based on said configuration
@@ -20,7 +19,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
       setLoading(false);
     }
   };
-
+  // runs each time the component is rendered
   useEffect(() => {
     if (
       axiosParams.method?.toLowerCase() === "get" ||
@@ -29,7 +28,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
       fetchData(axiosParams);
     }
   }, [axiosParams]);
-
+  // manual trigger of the hook instead of waiting for a rerender
   const sendData = () => {
     fetchData(axiosParams);
   };
