@@ -2,9 +2,7 @@ import "../styles/Header.css";
 
 function Header() {
   return (
-    <div className="header-root">
-      Header
-    </div>
+    <div className="header-root"/>
   );
 }
 
