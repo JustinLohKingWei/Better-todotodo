@@ -25,6 +25,10 @@ function InputBox({
         className="inputtextbox"
         type="text"
         placeholder="What needs to be done?"
+        value={inputQuery}
+        onClick={() => {
+          setdisplayListBox(true);
+        }}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             const newTaskItem: taskProps = {
@@ -33,14 +37,13 @@ function InputBox({
               completed: false,
             };
 
-            let taskListInstance = [...taskList]
-            taskListInstance.push(newTaskItem)
-            settaskList(taskListInstance)
-            ;
+            let taskListInstance = [...taskList];
+            taskListInstance.push(newTaskItem);
+            settaskList(taskListInstance);
           }
         }}
         onChange={(e) => {
-          setinputQuery(e.target.value)
+          setinputQuery(e.target.value);
         }}
       />
       <input
