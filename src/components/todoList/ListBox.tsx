@@ -6,9 +6,18 @@ import ListBoxToggle from "./ListBoxToggle";
 
 type ListBoxProps = {
   taskList: taskProps[];
+  settaskList: React.Dispatch<
+    React.SetStateAction<
+      {
+        taskname: string;
+        notes: string;
+        completed: boolean;
+      }[]
+    >
+  >;
 };
 
-function Listbox({ taskList }: ListBoxProps) {
+function Listbox({ taskList, settaskList }: ListBoxProps) {
   const [toggleDisplay, setToggleDisplay] = useState("All");
 
   return (
@@ -17,6 +26,8 @@ function Listbox({ taskList }: ListBoxProps) {
         if (toggleDisplay === "All") {
           return (
             <ListBoxItem
+              taskList={taskList}
+              settaskList={settaskList}
               taskname={data.taskname}
               notes={data.notes}
               completed={data.completed}
@@ -26,6 +37,8 @@ function Listbox({ taskList }: ListBoxProps) {
           if (data.completed === true) {
             return (
               <ListBoxItem
+                taskList={taskList}
+                settaskList={settaskList}
                 taskname={data.taskname}
                 notes={data.notes}
                 completed={data.completed}
@@ -36,6 +49,8 @@ function Listbox({ taskList }: ListBoxProps) {
           if (data.completed === false) {
             return (
               <ListBoxItem
+                taskList={taskList}
+                settaskList={settaskList}
                 taskname={data.taskname}
                 notes={data.notes}
                 completed={data.completed}

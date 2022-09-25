@@ -1,18 +1,18 @@
 .inputbox-root {
     display: flex;
-    background-color: blue;
     height: 100%;
 }
 
 .inputbox-root form{
     display: flex;
     width: 100%;
-    background-color: aquamarine;
 }
 
 .inputtextbox {
     width: 90%;
     font-size: xx-large;
+    background-color: rgb(9, 5, 5);
+    color:lightgreen
 }
 .submitbutton {
     width: 10%;

@@ -8,12 +8,12 @@ export const taskList1 = [
     {
         taskname: "Take a shower",
         notes : "Must wash balls",
-        completed : true,
+        completed : false,
     },
     {
         taskname: "Eat Cake",
         notes : "literally just eat cake",
-        completed : true,
+        completed : false,
     },
     {
         taskname: "Delete browser history",

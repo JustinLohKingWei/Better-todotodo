@@ -27,7 +27,7 @@ function TodoList() {
         taskList={taskList}
         settaskList={settaskList}
       />
-      {displayListBox ? <Listbox taskList={taskList} /> : <div />}
+      {displayListBox ? <Listbox taskList={taskList} settaskList={settaskList}/> : <div />}
     </div>
   );
 }
