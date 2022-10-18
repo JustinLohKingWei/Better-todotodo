@@ -5,11 +5,7 @@ type ListBoxItemProps = {
   taskList: taskProps[];
   settaskList: React.Dispatch<
     React.SetStateAction<
-      {
-        taskname: string;
-        notes: string;
-        completed: boolean;
-      }[]
+     taskProps[]
     >
   >;
   taskname: string;

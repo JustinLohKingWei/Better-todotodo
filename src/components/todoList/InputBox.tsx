@@ -19,6 +19,9 @@ function InputBox({
   taskList,
   settaskList,
 }: InputBoxProps) {
+
+  
+
   return (
     <div className="inputbox-root">
       <input
@@ -27,7 +30,7 @@ function InputBox({
         placeholder="What needs to be done?"
         value={inputQuery}
         onClick={() => {
-          setdisplayListBox(true);
+          setdisplayListBox(!displayListBox);
         }}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
